@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --navbar: 290 10% 89%;
+    --background: 0 0% 96%;
+    --foreground: 204 24% 59%;
+    --foreground-200: 204 21% 60%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -22,7 +26,7 @@
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 240 3% 85%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --accent: 210 40% 96.1%;
@@ -75,7 +79,30 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    @apply bg-background text-black;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    /* font-family: "Oswald", sans-serif; */
   }
+}
+
+.home-parent {
+  @apply grid grid-cols-[repeat(12,1fr)] grid-rows-[repeat(8,1fr)] gap-x-0 gap-y-0;
+}
+.home-div1 {
+  grid-area: 1 / 1 / 7 / 2;
+}
+.home-div2 {
+  grid-area: 7 / 1 / 9 / 2;
+}
+.home-div3 {
+  grid-area: 7 / 2 / 9 / 9;
+}
+.home-div4 {
+  grid-area: 7 / 9 / 9 / 13;
+}
+.home-div5 {
+  grid-area: 1 / 9 / 7 / 13;
+}
+.home-div6 {
+  grid-area: 1 / 2 / 7 / 9;
 }

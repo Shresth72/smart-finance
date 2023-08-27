@@ -2,6 +2,13 @@ import Navbar from "@/components/Navbar";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+
+export const poppins = Poppins({
+  weight: ["300", "400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL as string),
@@ -49,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={poppins.className}>
         <Navbar />
         {children}
       </body>
